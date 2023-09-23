@@ -1,0 +1,168 @@
+:root{
+    --back: #1E2022;
+    --fonte_principal: #F0F5F9;
+    --fonte_secundaria: #C9D6DF;
+    --hover: #5f6f7b;
+    --container: #3636357a;
+    --verde: #53C271;
+    --fonte-prim: "Poppins";
+    --fonte-sec: "Roboto";
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: var(--back);
+}
+#container{
+    display: flex;
+    justify-content: center;
+    margin: 20rem 10rem;
+    background-color: var(--container);
+}
+#faca_login{
+    font-family: var(--fonte-prim);
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--fonte_principal);
+    margin-top: 2rem;
+}
+#login_paragrafo{
+    font-family: var(--fonte-sec);
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--fonte_secundaria);
+    margin-bottom: 3rem;
+}
+#box_email{
+    margin: 1rem 0;
+}
+#email{
+    background-color: transparent;
+    border: 1px solid var(--fonte_principal);
+    border-radius: 0.25rem;
+    color: var(--fonte_principal);
+    padding: 0.75rem;
+    width: 100%;
+}
+#email::placeholder{
+    font-family: var(--fonte-sec);
+    font-weight: 400;
+    font-size: 1rem;
+    color: var(--hover);
+    text-align: center;
+    background: url(./img/mail.svg) no-repeat;
+    background-position: 0.2rem;
+}
+#box_senha{
+    margin-top: 2rem;
+}
+#senha{
+    background-color: transparent;
+    border: 1px solid var(--fonte_principal);
+    border-radius: 0.25rem;
+    padding: 0.75rem;
+    color: var(--fonte_principal);
+    width: 100%;
+    margin-bottom: 2rem;
+    
+}
+#senha::placeholder{
+    font-size: var(--fonte-sec);
+    font-weight: 400;
+    font-size: 1rem;
+    text-align: center;
+    color: var(--hover);
+    background: url(./img/lock.svg) no-repeat;
+    background-position: 0.2rem;
+}
+#login_email,
+#login_senha{
+    color: var(--fonte_secundaria);
+    font-family: var(--fonte-prim);
+    font-weight: 500;
+    font-size: 16px;
+}
+
+span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 1.5rem;
+    width: 1.5rem;
+    margin-left: -0.7rem;
+    background-color: var(--back);
+    border-radius: 0.3rem;
+    border: 1px solid var(--fonte_principal);    
+}
+#checkbox{
+    padding: 0.75rem;
+    width: 100%;
+}
+#check_style{
+    
+    position: relative;
+    padding: 0.2rem 1.5rem;
+    margin: 1rem 0;
+    font-size: 1.2rem;
+    font-weight: 400;
+    font-family: var(--fonte-sec);
+    color: var(--fonte_principal);
+    
+}
+#esqueceu_senha{
+    position: absolute;
+    margin-top: -0.2rem;
+    margin-left: 3rem;
+    text-decoration: none;
+    font-family: 'Poppins';
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: var(--verde);
+}
+#check{
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+#check_style:hover input ~ span{
+    background-color: var(--hover);
+    transition: 0.3ms;
+}
+#check_style input:checked ~ span{
+    background-color: #53C271;
+}
+#check_style span:after{
+    content: "";
+    position: absolute;
+    display: none;
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+#check_style input:checked ~ span:after{
+    display: block;
+}
+#botao{
+    background-color: var(--verde);
+    border-radius: 0.2rem;
+    margin: 1rem 0;
+    padding: 0.75rem;
+    width: 100%;
+}
+#botao_nome{
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    font-family: var(--fonte-prim);
+    font-weight: 600;
+    font-size: 1.3rem;
+    color: var(--back);
+}
