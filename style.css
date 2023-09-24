@@ -14,11 +14,14 @@
 }
 body{
     background-color: var(--back);
+    display: flex;
+    justify-content: center;
 }
 #container{
     display: flex;
     justify-content: center;
-    margin: 20rem 10rem;
+    width: 40%;
+    margin: 10%;
     background-color: var(--container);
 }
 #faca_login{
@@ -26,24 +29,21 @@ body{
     font-size: 2rem;
     font-weight: 600;
     color: var(--fonte_principal);
-    margin-top: 2rem;
+    margin-top: 10%;
 }
 #login_paragrafo{
     font-family: var(--fonte-sec);
     font-size: 1.2rem;
     font-weight: 500;
     color: var(--fonte_secundaria);
-    margin-bottom: 3rem;
-}
-#box_email{
-    margin: 1rem 0;
+    margin-bottom: 10%;
 }
 #email{
     background-color: transparent;
     border: 1px solid var(--fonte_principal);
     border-radius: 0.25rem;
     color: var(--fonte_principal);
-    padding: 0.75rem;
+    padding: 3%;
     width: 100%;
 }
 #email::placeholder{
@@ -56,16 +56,16 @@ body{
     background-position: 0.2rem;
 }
 #box_senha{
-    margin-top: 2rem;
+    margin-top: 10%;
 }
 #senha{
     background-color: transparent;
     border: 1px solid var(--fonte_principal);
     border-radius: 0.25rem;
-    padding: 0.75rem;
+    padding: 3%;
     color: var(--fonte_principal);
     width: 100%;
-    margin-bottom: 2rem;
+    margin-bottom: 10%;
     
 }
 #senha::placeholder{
@@ -91,20 +91,19 @@ span{
     left: 0;
     height: 1.5rem;
     width: 1.5rem;
-    margin-left: -0.7rem;
+    margin-left: -10%;
     background-color: var(--back);
     border-radius: 0.3rem;
     border: 1px solid var(--fonte_principal);    
 }
 #checkbox{
-    padding: 0.75rem;
+    padding: 3%;
     width: 100%;
 }
 #check_style{
     
     position: relative;
-    padding: 0.2rem 1.5rem;
-    margin: 1rem 0;
+    padding: 1% 7%;
     font-size: 1.2rem;
     font-weight: 400;
     font-family: var(--fonte-sec);
@@ -113,8 +112,8 @@ span{
 }
 #esqueceu_senha{
     position: absolute;
-    margin-top: -0.2rem;
-    margin-left: 3rem;
+    margin-top: -0.2%;
+    margin-left: 3em;
     text-decoration: none;
     font-family: 'Poppins';
     font-size: 1.1rem;
@@ -153,8 +152,8 @@ span{
 #botao{
     background-color: var(--verde);
     border-radius: 0.2rem;
-    margin: 1rem 0;
-    padding: 0.75rem;
+    margin: 10% 0;
+    padding: 3%;
     width: 100%;
 }
 #botao_nome{
@@ -166,3 +165,32 @@ span{
     font-size: 1.3rem;
     color: var(--back);
 }
+#sem_conta{
+    display: flex;
+    justify-content: center;
+    padding: 3%;
+    width: 100%;
+}
+#cadastre{
+    font-family: "Poppins";
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--verde);
+}
+@media ( max-width: 1200px){
+    #container{
+        width: 100vh;
+        background-color: var(--back);
+    }
+   
+}
+@media (max-width: 448px){
+    #login_paragrafo{
+        font-size: 100%;
+    }
+    #esqueceu_senha{
+        margin-left: 2%;
+       }
+}
+

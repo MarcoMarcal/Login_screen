@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Gab</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header>
+    </header>
+    <main id="container">
+        <section id="container_principal">
+            <h1 id="faca_login">Faça seu login</h1>
+            <p id="login_paragrafo">Entre com suas informações de cadastro.</p>
+            <div id="box_email">
+                <p id="login_email">Email</p>
+              <form action="/login" method="POST">
+                    <label>
+                        <input type="email" id="email" placeholder="Digite seu e-mail">
+                    </label>
+                 </div>
+                <div id="box_senha">
+                    <p id="login_senha">Senha</p>
+                    <label> 
+                        <input type="password" id="senha" placeholder="Digite sua senha">
+                    </label>
+                </div>
+                <div id="checkbox">
+                    <label id="check_style">Lembre-me
+                        <input type="checkbox" id="check">
+                        <span id="mark"></span>
+                    </label>
+                    <a href="#" id="esqueceu_senha">Esqueceu a senha?</a>
+                </div>
+                <div id="botao">
+                    <a href="#" id="botao_nome">Entrar</a>
+                </div>
+                <div id="sem_conta">
+                    <a href="./cadastro.html" id="cadastre">Não tem uma conta? <strong>Registre-se</strong></a>
+                </div>
+                </form>
+    </main>
+</body>
+</html>

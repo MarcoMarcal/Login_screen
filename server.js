@@ -140,26 +140,14 @@ app.get('/logout', (req, res) => {
   res.redirect('/login')
 })
 
-const path = require('path')
 
 app.get('/', loggedIn, async (req, res, next) => {
-  var sha256 = crypto.createHash('sha256').update(req.user.email).digest('hex');
-  console.log("User: "+ req.user.email+ " Id: "+sha256)
-  const fullPath = 'uploads/'+sha256;
-  
-  let files = fs.readdirSync(fullPath);
-
-  console.log(files);
-
+  console.log("User: "+ req.user.email)
   res.render('index.ejs', {
-    email: req.user.email,
-    files: files
+    email: req.user.email
   })
   next()
 })
-
-
-
 
 app.post('/upload', loggedIn, function(req, res, next){
   console.log(`User: ${req.user.email} starting uploading files...`)//uploading Start
@@ -183,6 +171,11 @@ app.post('/upload', loggedIn, function(req, res, next){
       res.json({"status":"completed"});
   });
 })
+
+
+
+
+
 
 const port = '3000';
 console.log(`listening on http://192.168.15.145:${port}`)
